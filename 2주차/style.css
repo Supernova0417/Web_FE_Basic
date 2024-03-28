@@ -1,6 +1,13 @@
-div {
+div div div,
+#content-box {
+  background-color: lightgreen;
+}
+div div div.horizontal-lists {
+  color: blue;
+}
+div .chapter-name {
+  font-weight: bolder;
+}
+div#current-chapter .chapter-name {
   color: red;
-  background-color: yellow;
-  font-size: 30px;
-  font-weight: 600;
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div span {
+        background-color: yellow;
+      }
+      /*div 태그를 부모 태그로 가지는 span 태그에 적용됨
+        span 태그는 div 태그의 자식 태그*/
+      #c_box span {
+        color: green;
+      }
+      div .blue_span {
+        background-color: blue;
+      }
+      div #c_span {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span> div 클래스 내의 span 입니다. </span>
+    </div>
+    <div id="c_box">
+      <span> div 내의 blue_span 클래스입니다. </span>
+    </div>
+    <div>
+      <span id="c_span"> div 내의 c_span 아이디 span 입니다. </span>
+    </div>
+    <div>
+      <span> c_box_div 아이디 내에 있지 않은 span 입니다. </span>
+    </div>
+  </body>
+</html>
