@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #f9fafc;
+    margin: 60px;
+  }
+  
+  .container {
+    border: 5px dashed #cacfd9;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    /* grid-template-columns: 100px 300px 100px; column을 나누는데 그 크기를 100 300 100 픽셀로 */
+    /* grid-template-rows: 200px 200px 100px; row을 나누는데 그 크기를 200 200 100으로 */
+    /* grid-template-columns: 1fr 1fr 1fr; column을 나누는데 1:1:1의 비율로 */
+    /* grid-template-rows: 1fr 1fr 1fr; row을 누는데 1:1:1의 비율로 */
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  
+  .box {
+    border-radius: 15px;
+    color: #f9fafc;
+    padding: 10px;
+  }
+  
+  .red {
+    background-color: #e46e80;
+  }
+  
+  .blue {
+    background-color: #6e87e4;
+  }
+  .green {
+    background-color: #6ee4af;
+    grid-row: 2 / 4;
+    grid-column: 2 / 5;
+  }
+  .purple {
+    background-color: #bf6ee4;
+  }
+  .orange {
+    background-color: #e4a36e;
+  }
+  

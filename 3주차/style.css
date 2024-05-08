@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f9fafc;
+  margin: 60px;
+}
+
+.container {
+  border: 5px dashed #cacfd9;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  /* 정렬 방향 : row, column, row-reverse, column-reverse */
+  flex-direction: row;
+  /* 기본축에 대한 정렬 : flex-start, center, flex-end, space-around, space-between, space-evenly, ... */
+  justify-content: flex-start;
+  /* 보조축에 대한 정렬 : center, flex-end, flex-start, stretch, ... */
+  align-items : flex-start;
+  /* flex-wrap: nowrap;, wrap;, wrap-reverse; */
+  flex-wrap: wrap;
+  gap: 16px 64px;
+}
+
+.box {
+  border-radius: 15px;
+  color: #f9fafc;
+  padding: 30px;
+}
+
+.red {
+  background-color: #e46e80;
+}
+
+.blue {
+  background-color: #6e87e4;
+}
+.green {
+  background-color: #6ee4af;
+}
