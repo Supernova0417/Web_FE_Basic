@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 접근 예시</title>
+  </head>
+  <body>
+    <div id="myElement">myElement id 요소</div>
+    <div class="myClass">첫 번째 div 요소</div>
+    <div class="myClass">두 번째 div 요소</div>
+    <div class="myClass">세 번째 div 요소</div>
+    <div>네 번째 div 요소</div>
+    <script>
+      let getId = document.getElementById("myElement");
+      let getClass = document.getElementsByClassName("myClass");
+      let getTagName = document.getElementsByTagName("div");
+      let query = document.querySelector(".myClass");
+      let queryAll = document.querySelectorAll(".myClass");
+
+      console.log(getId);
+      console.log(getClass);
+      console.log(getTagName);
+      console.log(query);
+      console.log(queryAll);
+    </script>
+  </body>
+</html>

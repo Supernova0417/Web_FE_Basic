@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #101010; /* Dark background */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    width: 250px; /* Adjusted width */
+    background: #000000; /* Dark grey background */
+    border-radius: 10px;
+    padding: 10px; /* Padding around the calculator */
+}
+
+.display {
+    background: #000;
+    color: #fff;
+    font-size: 2.5em;
+    padding: 20px;
+    text-align: right;
+    border-radius: 5px; /* Slightly rounded corners for the display */
+}
+
+.additonal-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.icons {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px; /* Space between buttons */
+}
+
+.key {
+    background: #292929; /* Dark button background */
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 0; /* Padding for button height */
+    border-radius: 50%; /* Circular buttons */
+    outline: none;
+    border: none;
+}
+
+.key:active {
+    background: #000000; /* Darker background on active */
+}
+
+.key-c, .key-brackets, .key-percent, .key-divide,
+.key-multiply, .key-minus, .key-plus {
+    background: #373b3b; /* Teal for operation buttons */
+}
+
+.key-c {
+    color: #dc4d4d;
+}
+
+.key-brackets, .key-percent, .key-divide, 
+.key-multiply, .key-minus, .key-plus {
+    color: #3cbd54;
+}
+
+.key-equals {
+    background: #0b983a;
+}
+/*
+.key-plusminus, .key-dot {
+    background: #555;
+}
+*/

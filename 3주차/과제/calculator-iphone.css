@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 320px; /* Slightly increased to accommodate padding between buttons */
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.display {
+    background: #000;
+    color: #fff;
+    font-size: 3em;
+    width: 320px;
+    height: 180px;
+    /* padding: 60px; */
+    text-align: right; /* Keeps text aligned to the right */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #555; /* Thin grey border */
+    display: flex; /* Added to use flexbox for vertical alignment */
+    justify-content: flex-end; /* Align horizontally to the right */
+    align-items: flex-end; /* Align vertically to the bottom */
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px; /* Space between buttons */
+    padding: 5px; /* Padding around the grid for aesthetics */
+}
+
+.key {
+    background: #666;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px 0;
+    border-radius: 50%;
+    outline: none;
+}
+
+.key:active {
+    background: #888;
+}
+
+.key-ac, .key-c, .key-percent {
+    background: #888; /* Changed to grey as requested */
+}
+
+.key-divide, .key-plus, .key-minus, .key-multiply, .key-equals {
+    background: orange;
+}
+
+.key-dot {
+    background: #555;
+}
