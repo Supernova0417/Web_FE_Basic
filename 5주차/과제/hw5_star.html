@@ -4,11 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Pyramid</title>
-    <script src="hw5_star.js" defer></script>
+    <!-- <script src="hw5_star.js" defer></script> -->
 </head>
 <body>
     <h1>Star Pyramid</h1>
     <button onclick="printStarPyramid()">Print Star Pyramid</button>
     <pre id="starOutput"></pre>
+    <!-- https://mainia.tistory.com/2892 : <pre> 태그로 감싼 문장은 입력한 문장 형태 그대로 브라우저에 표현할 수 있다. -->
+    <script>
+        function printStarPyramid() {           
+            /*
+	        6주차 세션 시작 전 처음에 제출한 내용
+
+            let rows = 5;
+            let output = '';
+
+            for (let i = 1; i <= rows; i++) {
+                let row = '';
+                for (let j = 0; j < rows - i; j++) {
+                    row += ' ';
+                }
+                for (let k = 0; k < i; k++) {
+                    row += '* ';
+                }
+                output += row.trim() + '\n';
+            }
+            */
+
+            /*
+	        GPT-4가 알려준 정답
+            자바스크립트는 문자열 곱셈을 지원하지 않기에 repeat() 매서드를 사용해야 한다.
+
+            function printStarPyramid() {
+            let limit = 5;
+            let output = '';
+
+            for (let i = 1; i <= limit; i++) {
+                // 공백 추가
+                let spaces = ' '.repeat(limit - i);
+                // 별 추가
+                let stars = '*'.repeat(2 * i - 1);
+                // 한 줄 출력
+                output += spaces + stars + '\n';
+            }
+            */
+
+            /*
+            다음 코드는 무한 내부 루프를 발생시킨다는 문제가 있다.
+            Out_of_Memory_Error.PNG 참고.
+
+            let limit = 5;
+            let outputArray = [];
+            let output = '';
+
+            for(let i=1; i<=limit; i++) {
+                outputArray.push("*".repeat(2 * i - 1));
+                for(let j=0; j<=outputArray.length; j++) {
+                    outputArray[j] = " ".repeat(j + 1) + outputArray[j];
+                }
+            }
+
+            for(let k=0; j<=outputArray.length; k++) {
+                output += outputArray[k] + '\n';
+            }
+            */
+
+            let limit = 5;
+            let outputArray = [];
+            let output = '';
+
+            for (let i = 1; i <= limit; i++) {
+                let stars = "*".repeat(2 * i - 1);
+                let spaces = " ".repeat(limit - i);
+                outputArray.push(spaces + stars);
+            }
+
+            for (let k = 0; k < outputArray.length; k++) {
+                output += outputArray[k] + '\n';
+            }
+
+            document.getElementById('starOutput').textContent = output;
+        }
+    </script>
 </body>
 </html>

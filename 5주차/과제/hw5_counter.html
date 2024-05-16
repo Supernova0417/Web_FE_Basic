@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
-    <script src="hw5_counter.js" defer></script>
+    <!-- <script src="hw5_counter.js" defer></script> -->
 </head>
 <body>
     <h1>Counter</h1>
     <button onclick="decrement()">-</button>
     <span id="number">0</span>
     <button onclick="increment()">+</button>
+
+    <script>
+    function increment() {
+        let numberElement = document.getElementById('number');
+        /* let currentNumber = parseInt(numberElement.textContent, 10); 또는 ↓ */
+        let currentNumber = Number(numberElement.textContent);
+        /* https://hianna.tistory.com/706 : Number()는 오로지 숫자 타입의 "문자열"만 숫자로 변환 가능 */
+        numberElement.textContent = currentNumber + 1;
+    }
+    
+    function decrement() {
+        let numberElement = document.getElementById('number');
+        let currentNumber = parseInt(numberElement.textContent, 10); /* parseInt( ~ , n진수) : n진수를 표시하지 않으면 기본적으로 10진수 */
+        if (currentNumber > 0) {
+            numberElement.textContent = currentNumber - 1;
+        }
+    }
+    </script>
 </body>
 </html>
