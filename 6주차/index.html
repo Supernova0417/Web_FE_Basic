@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Event Example</title>
+</head>
+<body>
+    <input type="text" id="inputField" onchange="alertChange()" placeholder="텍스트를 입력하세요.">
+    <p id="displayText"></p>
+        <script>
+            function alertChange() {
+                let input = document.getElementById('inputField').value;
+                document.getElementById('displayText').innerHTML = "입력된 내용: " + input;
+            }
+        </script>
+</body>
+</html>

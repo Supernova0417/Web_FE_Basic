@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .outer {
+        width: 500px;
+        height: 200px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inner {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+
+      .text {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <p class="text"></p>
+        <p></p>
+      </div>
+    </div>
+    <script>
+      let target = document.querySelector(".inner");
+      let text = document.querySelector(".text");
+      let num = 1;
+      target.addEventListener('dblclick', numClick); /* click, */
+      function numClick() {
+        text.innerHTML = "더블 클릭 횟수: " + num + "회";
+        num++;
+      }
+
+      /*
+      var clickNumber = 0;
+      document.getElementById("inner").onclick = function() {
+        clickNumber++;
+        document.getElementById('inner').innerHTML = "클릭 횟수: " + clickNumber;
+      }
+      */
+    </script>
+  </body>
+</html>
